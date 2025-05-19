@@ -20,7 +20,7 @@ interface WithdrawalFormProps {
   // onWithdraw?: (amount: number, cryptoType: CryptoType, walletAddress: string) => Promise<void> | void
 }
 
-export default function WithdrawalForm({ balance=200 }: WithdrawalFormProps) {
+export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
   const [amount, setAmount] = useState<string>("")
   const [cryptoType, setCryptoType] = useState<CryptoType>("bitcoin")
   const [walletAddress, setWalletAddress] = useState<string>("")

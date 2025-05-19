@@ -79,7 +79,7 @@ export default async function Home() {
         </header>
         {bal?.verified === 0 && (
           <div className="bg-amber-900/30 border-b border-amber-800/50 p-3 flex items-center justify-center text-sm">
-            <AlertCircle className="w-4 h-4 mr-2 text-amber-400" />
+            
             <span className="text-amber-200">
               Please verify your identity to unlock all referral features
             </span>
