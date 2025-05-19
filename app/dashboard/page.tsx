@@ -79,12 +79,12 @@ export default async function Home() {
         </header>
         {bal?.verified === 0 && (
           <div className="bg-amber-900/30 border-b border-amber-800/50 p-3 flex items-center justify-center text-sm">
-            
+
             <span className="text-amber-200">
               Please verify your identity to unlock all referral features
             </span>
             <Button variant="link" className="text-amber-400 font-medium ml-1 h-auto p-0">
-              Submit Now <ArrowUpRight className="w-3 h-3 ml-1" />
+              Submit Now 
             </Button>
           </div>
         )}
