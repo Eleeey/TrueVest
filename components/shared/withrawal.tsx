@@ -21,7 +21,7 @@ interface WithdrawalFormProps {
 }
 
 export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
-  const [amount, setAmount] = useState<Number>(0)
+  const [amount, setAmount] = useState<number>(0)
   const [cryptoType, setCryptoType] = useState<CryptoType>("bitcoin")
   const [walletAddress, setWalletAddress] = useState<string>("")
   const [isSubmitting, setIsSubmitting] = useState(false)
