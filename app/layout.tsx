@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Menance",
+  title: "TrueVest",
   description: "Full fledged investment app",
 };
 
