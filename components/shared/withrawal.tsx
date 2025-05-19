@@ -137,7 +137,7 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
     try {
       await updateAfterWithdrawal(amount)
 
-      // Show success state
+      // Show success s
       setSuccess(true)
       toast({
         title: "Withdrawal Initiated",
