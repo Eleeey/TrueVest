@@ -22,7 +22,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Progress } from "@/components/shared/progress";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
@@ -84,7 +84,7 @@ export default async function Home() {
               Please verify your identity to unlock all referral features
             </span>
             <Button variant="link" className="text-amber-400 font-medium ml-1 h-auto p-0">
-              Submit Now 
+              Submit Now
             </Button>
           </div>
         )}
