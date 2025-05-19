@@ -21,7 +21,7 @@ interface WithdrawalFormProps {
 }
 
 export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
-  const [amount, setAmount] = useState<number>(0)
+  const [amount, setAmount] = useState<string>("")
   const [cryptoType, setCryptoType] = useState<CryptoType>("bitcoin")
   const [walletAddress, setWalletAddress] = useState<string>("")
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -29,7 +29,7 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
   const [error, setError] = useState<string | null>(null)
   const [addressError, setAddressError] = useState<string | null>(null)
 
-  const numericAmount = amount
+  const numericAmount = parseFloat(amount)
   const isAmountValid = !isNaN(numericAmount) && numericAmount > 0 && numericAmount <= balance
   const isWalletAddressValid = validateWalletAddress(walletAddress, cryptoType)
   const canSubmit = balance > 0 && isAmountValid && isWalletAddressValid && !isSubmitting
