@@ -222,7 +222,7 @@ const ReferralDashboard = () => {
                         value={0}
                         max={100}
                         className="h-1.5 mt-1 bg-gray-700"
-                        indicatorClassName="bg-pink-500"
+              
                       />
                     </div>
                   </div>
