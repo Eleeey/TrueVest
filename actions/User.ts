@@ -166,7 +166,7 @@ export async function getUserHistory() {
 
 export async function updateAfterDeposit(
 
-  amount: number,
+  amount: any,
   receiptUrl: string
 ) {
   try {
@@ -207,7 +207,7 @@ export async function updateAfterDeposit(
 
 export async function updateAfterWithdrawal(
 
-  amount: number,
+  amount: any,
 
 ) {
   try {
