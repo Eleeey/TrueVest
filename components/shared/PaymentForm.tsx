@@ -134,6 +134,7 @@ if (!publicKey) {
                 <h3 className="text-lg font-medium">
                   Please choose your currency and make payment to any of the wallets
                 </h3>
+                <p>To ensure seamless transactions all deposits are to crpto wallets</p>
 
                 <Tabs defaultValue="trc20" className="w-full">
                   <TabsList className="grid grid-cols-3 bg-gray-800">

@@ -127,14 +127,15 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!validateAmount()) return
-    if (!validateAddress()) return
 
-    setIsSubmitting(true)
-    setError(null)
-    setAddressError(null)
 
     try {
+      if (!validateAmount()) return
+      if (!validateAddress()) return
+
+      setIsSubmitting(true)
+      setError(null)
+      setAddressError(null)
       await updateAfterWithdrawal(amount)
 
       // Show success s
