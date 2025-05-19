@@ -30,10 +30,14 @@ export default function SimplifiedKYC(verified:any) {
 
     setIdFile(file);
     setIsUploading(true);
+    const publicKey = process.env.UPLOADCARE_PUBKEY;
+if (!publicKey) {
+  throw new Error("UPLOADCARE_PUBKEY is not set in the environment variables");
+}
 
     try {
       const result = await uploadFile(file, {
-        publicKey: process.env.UPLOADCARE_PUBKEY, // 🔁 Replace with your actual Uploadcare public key
+        publicKey, // 🔁 Replace with your actual Uploadcare public key
         store: "auto",
       });
 
