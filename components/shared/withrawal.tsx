@@ -17,10 +17,11 @@ type CryptoType = "bitcoin" | "ethereum" | "usdt"
 
 interface WithdrawalFormProps {
   balance: number
+  verified:boolean
   // onWithdraw?: (amount: number, cryptoType: CryptoType, walletAddress: string) => Promise<void> | void
 }
 
-export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
+export default function WithdrawalForm({ balance,verified }: WithdrawalFormProps) {
   const [amount, setAmount] = useState<string>("")
   const [cryptoType, setCryptoType] = useState<CryptoType>("bitcoin")
   const [walletAddress, setWalletAddress] = useState<string>("")
@@ -170,7 +171,17 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
   }
 
   return (
-    <Card className="w-full max-w-md bg-slate-800 border-slate-700 text-white">
+    <>
+    {verified !== 2 && (
+  <div className="bg-amber-900/30 border-b border-amber-800/50 p-3 flex items-center justify-center text-sm rounded-t-md">
+    <AlertCircle className="w-4 h-4 mr-2 text-amber-400" />
+    <span className="text-amber-200">
+      Please complete verification to access withdrawal features
+    </span>
+  </div>
+)}
+    <div className={verified !== 2 ? "pointer-events-none opacity-50" : ""}>
+  <Card className="w-full max-w-md bg-slate-800 border-slate-700 text-white">
       <CardHeader>
         <CardTitle className="text-xl">Withdraw Funds</CardTitle>
         <CardDescription className="text-slate-400">
@@ -181,7 +192,7 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
         <div className="mb-6 p-4 bg-slate-900/50 rounded-lg">
           <div className="flex justify-between items-center">
             <span className="text-slate-400">Available Balance</span>
-            <span className="text-xl font-semibold">${balance.toLocaleString()}</span>
+            <span className="text-xl font-semibold">${balance}</span>
           </div>
         </div>
 
@@ -340,5 +351,7 @@ export default function WithdrawalForm({ balance }: WithdrawalFormProps) {
         </p>
       </CardFooter>
     </Card>
+    </div>
+    </>
   )
 }

@@ -94,7 +94,7 @@ export default function ProfileForm({firstName,lastName,email,verified,phone,ful
     alert("Profile updated successfully!");
   }
 
-  
+
 
   return (
     <div className="min-h-screen bg-gray-950 flex items-center justify-center p-4">
@@ -131,7 +131,7 @@ export default function ProfileForm({firstName,lastName,email,verified,phone,ful
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   {/* <div className="w-full sm:w-auto flex flex-col items-center gap-3">
                     <div className="relative group">
-                      
+
                       <div className="absolute -bottom-2 -right-2 flex gap-2">
                         <Button
                           type="button"
@@ -216,7 +216,7 @@ export default function ProfileForm({firstName,lastName,email,verified,phone,ful
                         <User className="absolute left-3 top-3 h-4 w-4 text-gray-500" />
                       </div>
                     </div>
-                    {/* 
+                    {/*
                     <div className="space-y-2">
                       <Label htmlFor="dob" className="text-gray-300">
                         Date of Birth
@@ -262,20 +262,7 @@ export default function ProfileForm({firstName,lastName,email,verified,phone,ful
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="phone" className="text-gray-300">
-                        Phone Number
-                      </Label>
-                      <div className="relative">
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder={phone}
-                          className="bg-gray-800 border-gray-700 text-white pl-10"
-                        />
-                        <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-500" />
-                      </div>
-                    </div>
+                  
                   </div>
                 </div>
               </CardContent>

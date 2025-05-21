@@ -3,13 +3,14 @@ import SettingsForm from "@/components/shared/SettingsForm";
 
 const page = async () => {
   const clerkUser = await getClerkUser();
+  console.log(clerkUser)
   const user = await getUserInfo();
   return (
     <>
       <SettingsForm
         firstName={clerkUser?.firstName}
         lastName={clerkUser?.lastName}
-        email={clerkUser?.primaryEmailAddress}
+        email={clerkUser?.emailAddresses?.[0]?.emailAddress}
         verified={user?.verified}
         fullName={clerkUser?.fullName}
         phone=""
