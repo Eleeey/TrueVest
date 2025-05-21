@@ -17,7 +17,7 @@ type CryptoType = "bitcoin" | "ethereum" | "usdt"
 
 interface WithdrawalFormProps {
   balance: number
-  verified:boolean
+  verified:number
   // onWithdraw?: (amount: number, cryptoType: CryptoType, walletAddress: string) => Promise<void> | void
 }
 
