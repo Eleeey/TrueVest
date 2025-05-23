@@ -140,7 +140,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-1">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              Smart Investing for the <span className="text-blue-500">Better Tommorow</span>
+              Smart Investment for a <span className="text-blue-500">Better Tommorow</span>
             </h1>
             <p className="mt-6 text-xl text-gray-300 max-w-2xl mx-auto">
               Our advanced trading algorithms and expert financial team deliver consistent returns by identifying the
@@ -473,7 +473,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "I've been investing with SecureInvest for over 3 years now. Their platform is intuitive, and the
+                  "I've been investing with TrueVest for over 3 years now. Their platform is intuitive, and the
                   returns have consistently exceeded my expectations. The automated investment strategy has saved me
                   countless hours."
                 </p>
@@ -499,9 +499,9 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "As someone who knows little about investing, SecureInvest has been a game-changer. Their platform
+                  "As someone who knows little about investing, TrueVest has been a game-changer. Their platform
                   makes everything simple, and their customer service team is always ready to help. My portfolio has
-                  grown 22% in just one year!"
+                  grown 120% in just one year!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center text-xl font-bold">
@@ -525,7 +525,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  "I've tried several investment platforms, and SecureInvest stands out for its transparency and
+                  "I've tried several investment platforms, and TrueVest stands out for its transparency and
                   performance. Their risk management approach has protected my investments during market downturns while
                   still delivering solid returns."
                 </p>
@@ -554,9 +554,9 @@ export default function LandingPage() {
 
           <div className="space-y-6">
             <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-              <h3 className="text-xl font-bold mb-2">How does SecureInvest work?</h3>
+              <h3 className="text-xl font-bold mb-2">How does TrueVest work?</h3>
               <p className="text-gray-300">
-                SecureInvest uses advanced algorithms and expert financial analysis to identify profitable investment
+                TrueVest uses advanced algorithms and expert financial analysis to identify profitable investment
                 opportunities across global markets. We automatically allocate your funds based on your risk profile and
                 investment goals to maximize returns.
               </p>
@@ -588,7 +588,7 @@ export default function LandingPage() {
             </div>
 
             <div className="bg-gray-800 rounded-lg p-6 border border-gray-700">
-              <h3 className="text-xl font-bold mb-2">What fees does SecureInvest charge?</h3>
+              <h3 className="text-xl font-bold mb-2">What fees does TrueVest charge?</h3>
               <p className="text-gray-300">
                 We charge a simple 1% annual management fee based on your account balance. There are no hidden fees,
                 transaction costs, or withdrawal penalties.
@@ -655,22 +655,14 @@ export default function LandingPage() {
               <h3 className="text-lg font-bold mb-4">Products</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/investment" className="text-gray-400 hover:text-white transition-colors">
                     Investment Plans
                   </Link>
                 </li>
+
+
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Retirement Accounts
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Tax Strategies
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/dashboard" className="text-gray-400 hover:text-white transition-colors">
                     For Businesses
                   </Link>
                 </li>
@@ -690,12 +682,12 @@ export default function LandingPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/investment" className="text-gray-400 hover:text-white transition-colors">
                     Investment Guides
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="#faq" className="text-gray-400 hover:text-white transition-colors">
                     FAQ
                   </Link>
                 </li>
@@ -732,7 +724,7 @@ export default function LandingPage() {
               <TrendingUp className="h-6 w-6 text-blue-500" />
               <span className="ml-2 text-lg font-bold">SecureInvest</span>
             </div>
-            <div className="mt-4 md:mt-0 text-gray-400 text-sm">© 2023 SecureInvest. All rights reserved.</div>
+            <div className="mt-4 md:mt-0 text-gray-400 text-sm">© 2023 TrueVest. All rights reserved.</div>
             <div className="mt-4 md:mt-0 flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Facebook</span>

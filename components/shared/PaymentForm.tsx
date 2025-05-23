@@ -20,9 +20,9 @@ export default function PaymentForm() {
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const walletAddresses = [
-    { id: 1, address: "TN6r2bhYxM5tsYtLMdUNYc7hTLptLfQgq TRC20", type: "TRC20" },
-    { id: 2, address: "12quVJbszHPGeBcQXazpn69tAQimYkopvw BTC", type: "BTC" },
-    { id: 3, address: "0x8F3Cf7ad23Cd3CaDbD9735AFf958023239c6A063 ETH", type: "ETH" },
+    { id: 1, address: "0x2709a94b97bfa4fe2055f240fc449694655f9c1e", type: "USDT" },
+    { id: 2, address: "bc1qynpxz4em4qmqzqth286s4uqawldj4ze4r0mur5", type: "BTC" },
+    { id: 3, address: "0x2709a94b97bfa4fe2055f240fc449694655f9c1e", type: "ETH" },
   ]
 
   const handleCopyAddress = (address: string) => {

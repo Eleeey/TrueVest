@@ -8,7 +8,7 @@ export default function InvestmentPlans() {
     {
       id: "01",
       tier: "Tier 1",
-      return: "50%",
+      return: "100%",
       period: "Weekly",
       minMax: "$50-$999",
       capitalBack: "Yes",
@@ -20,7 +20,7 @@ export default function InvestmentPlans() {
     {
       id: "02",
       tier: "Tier 2",
-      return: "60%",
+      return: "120%",
       period: "Weekly",
       minMax: "$1000-$2999",
       capitalBack: "Yes",
@@ -32,7 +32,7 @@ export default function InvestmentPlans() {
     {
       id: "03",
       tier: "Tier 3",
-      return: "65%",
+      return: "140%",
       period: "Weekly",
       minMax: "$3000–$4999",
       capitalBack: "Yes",
@@ -45,7 +45,7 @@ export default function InvestmentPlans() {
     {
       id: "04",
       tier: "Tier 4",
-      return: "70%",
+      return: "160%",
       period: "Weekly",
       minMax: "$5000–$9999",
       capitalBack: "Yes",
@@ -57,7 +57,7 @@ export default function InvestmentPlans() {
     {
       id: "05",
       tier: "Tier 5",
-      return: "75%",
+      return: "180%",
       period: "Weekly",
       minMax: "$10000–$19999",
       capitalBack: "Yes",
@@ -82,7 +82,7 @@ export default function InvestmentPlans() {
             key={plan.id}
             className="border-[1px] border-purple-500/30 bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden"
           >
-            
+
 
             <CardHeader className="pb-0">
               <div className="flex flex-col items-center">

@@ -16,11 +16,11 @@ export default function BadgesDisplay() {
     {
       id: 1,
       name: "Monance Member",
-      description: "By signing up to the account",
+      description: "Make your first deposit on the app",
       level: "bronze",
       icon: "🥉",
       category: "account",
-      unlocked: true,
+      unlocked: false,
       reward: {
         type: "bonus",
         value: "$200 account credit",
