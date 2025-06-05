@@ -282,7 +282,7 @@ export async function getWalletAdderess() {
 
 
 export async function handleClick(){
-  const clerkUser=await getClerkUser()
+  const clerkUser=await currentUser()
   try {
     await connectToDatabase();
 
