@@ -287,7 +287,7 @@ export async function handleClick(){
     await connectToDatabase();
 
     const user = await User.findOneAndUpdate(
-      { clerkId:clerk?.id },
+      { clerkId:clerkUser?.id },
       { badge1: false },
       { new: true }
     );
