@@ -279,3 +279,25 @@ export async function getWalletAdderess() {
   }
 
 }
+
+
+export async function handleClick(){
+  const clerkUser=await getClerkUser()
+  try {
+    await connectToDatabase();
+
+    const user = await User.findOneAndUpdate(
+      { clerkId:clerk?.id },
+      { badge1: false },
+      { new: true }
+    );
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({ message: 'Badge updated', user });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error });
+  }
+}

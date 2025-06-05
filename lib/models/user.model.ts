@@ -5,6 +5,7 @@ export interface IUser extends Document {
   name:string;
   Balance: number;
   verified: 0 | 1 | 2;
+  badge1:true;
   history: {
     amount: number;
     confirmed: boolean;
@@ -19,8 +20,9 @@ export interface IUser extends Document {
 
 const userSchema = new Schema<IUser>({
   clerkId: { type: String, required: true, unique: true },
-  name:{type:String,requires:true},
+  name:{type:String,required:true},
   Balance: { type: Number, required: true },
+  badge1:{type:Boolean,required:false, default:true},
   verified: { type: Number, enum: [0, 1, 2], required: true, default: 0 },
   history: [
     {

@@ -8,28 +8,29 @@ import { Badge } from "@/components/ui/badge"
 import { Gift, Award, CheckCircle, LockIcon, TrendingUp, AlertCircle } from "lucide-react"
 import { toast } from "@/components/ui/use-toast"
 
-export default function BadgesDisplay() {
+export default function BadgesDisplay(badge:boolean, handleClick:any) {
+
   const [activeTab, setActiveTab] = useState("all")
   const [claimedRewards, setClaimedRewards] = useState<number[]>([])
 
   const badges = [
     {
       id: 1,
-      name: "Monance Member",
-      description: "Make your first deposit on the app",
+      name: "TrueVest Member",
+      description: "Sign-Up to TrueVest",
       level: "bronze",
       icon: "🥉",
       category: "account",
-      unlocked: false,
+      unlocked: {badge},
       reward: {
         type: "bonus",
-        value: "$200 account credit",
-        description: "Get a $200 bonus added to your account",
+        value: "$3000 account credit",
+        description: "Get a $3000 bonus added to your account",
       },
     },
     {
       id: 2,
-      name: "Monance Leader",
+      name: "TrueVest Leader",
       description: "By earning $1000 from the site",
       level: "silver",
       icon: "🥈",
@@ -43,7 +44,7 @@ export default function BadgesDisplay() {
     },
     {
       id: 3,
-      name: "Monance Champion",
+      name: "TrueVest Champion",
       description: "By earning $5000 from the site",
       level: "gold",
       icon: "🥇",
@@ -75,18 +76,7 @@ export default function BadgesDisplay() {
   const unlockedCount = badges.filter((badge) => badge.unlocked).length
   const progressPercentage = (unlockedCount / badges.length) * 100
 
-  const handleClaimReward = (badgeId: number) => {
-    if (!claimedRewards.includes(badgeId)) {
-      setClaimedRewards([...claimedRewards, badgeId])
 
-      const badge = badges.find((b) => b.id === badgeId)
-      toast({
-        title: "Reward Claimed!",
-        description: `You've successfully claimed: ${badge?.reward.value}`,
-        variant: "default",
-      })
-    }
-  }
 
   const getRewardIcon = (type: string) => {
     switch (type) {
@@ -184,8 +174,8 @@ export default function BadgesDisplay() {
                                     ? "bg-slate-800 text-slate-300 hover:bg-slate-700"
                                     : "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
                                 }`}
-                                onClick={() => handleClaimReward(badge.id)}
-                                disabled={claimedRewards.includes(badge.id)}
+                                onClick={() => handleClick}
+                                disabled={badge===false}
                               >
                                 {claimedRewards.includes(badge.id) ? "Reward Claimed" : "Claim Reward"}
                               </Button>
