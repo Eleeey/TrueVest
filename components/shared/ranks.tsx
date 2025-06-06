@@ -8,7 +8,14 @@ import { Badge } from "@/components/ui/badge"
 import { Gift, Award, CheckCircle, LockIcon, TrendingUp, AlertCircle } from "lucide-react"
 import { toast } from "@/components/ui/use-toast"
 
-export default function BadgesDisplay(badge:boolean, handleClick:any) {
+type BadgesDisplayProps = {
+    badge: boolean;
+      handleClick: () => void;
+      };
+
+
+
+export default function BadgesDisplay({badge, handleClick:any}) {
 
   const [activeTab, setActiveTab] = useState("all")
   const [claimedRewards, setClaimedRewards] = useState<number[]>([])
