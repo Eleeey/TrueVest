@@ -8,14 +8,14 @@ import { Badge } from "@/components/ui/badge"
 import { Gift, Award, CheckCircle, LockIcon, TrendingUp, AlertCircle } from "lucide-react"
 import { toast } from "@/components/ui/use-toast"
 
-type BadgesDisplayProps = {
+type Props = {
     badge: boolean;
       handleClick: () => void;
       };
 
 
 
-export default function BadgesDisplay({badge, handleClick:any}) {
+export default function BadgesDisplay({badge, handleClick}:Props) {
 
   const [activeTab, setActiveTab] = useState("all")
   const [claimedRewards, setClaimedRewards] = useState<number[]>([])
@@ -31,22 +31,10 @@ export default function BadgesDisplay({badge, handleClick:any}) {
       unlocked: {badge},
       reward: {
         type: "bonus",
-        value: "$3000 account credit",
-        description: "Get a $3000 bonus added to your account",
-      },
-    },
-    {
-      id: 2,
-      name: "TrueVest Leader",
-      description: "By earning $1000 from the site",
-      level: "silver",
-      icon: "🥈",
-      category: "earnings",
-      unlocked: false,
-      reward: {
-        type: "discount",
-        value: "10% fee reduction",
-        description: "Enjoy 10% off on all transaction fees",
+        value: "$5000 account credit",
+     type: "discount",
+        value: "$5000 bonus",
+        description:"Enjoy $5000 signup bonus",
       },
     },
     {
