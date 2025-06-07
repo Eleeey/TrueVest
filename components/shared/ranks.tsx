@@ -28,7 +28,7 @@ export default function BadgesDisplay({badge, handleClick}:Props) {
       level: "bronze",
       icon: "🥉",
       category: "account",
-      unlocked: {badge},
+      unlocked: badge,
       reward: {
         type:"Bonus",
         value:"$5000 account bonus",
