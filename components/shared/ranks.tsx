@@ -11,7 +11,7 @@ import { toast } from "@/components/ui/use-toast"
 type Props = {
     badg: boolean;
       handleClick: () => void;
-      };
+    };
 
 
 
@@ -28,7 +28,7 @@ export default function BadgesDisplay({badg, handleClick}:Props) {
       level: "bronze",
       icon: "🥉",
       category: "account",
-o      unlocked: badg,
+      unlocked: badg,
       reward: {
         type:"Bonus",
         value:"$5000 account bonus",
