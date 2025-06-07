@@ -31,7 +31,7 @@ export default function BadgesDisplay({badge, handleClick}:Props) {
       unlocked: {badge},
       reward: {
         type:"Bonus",
-        value:"$5000 account bonus"
+        value:"$5000 account bonus",
         description:"Enjoy $5000 signup bonus",
       },
     },
