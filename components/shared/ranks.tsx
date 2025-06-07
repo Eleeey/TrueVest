@@ -9,13 +9,13 @@ import { Gift, Award, CheckCircle, LockIcon, TrendingUp, AlertCircle } from "luc
 import { toast } from "@/components/ui/use-toast"
 
 type Props = {
-    badge: boolean;
+    badg: boolean;
       handleClick: () => void;
       };
 
 
 
-export default function BadgesDisplay({badge, handleClick}:Props) {
+export default function BadgesDisplay({badg, handleClick}:Props) {
 
   const [activeTab, setActiveTab] = useState("all")
   const [claimedRewards, setClaimedRewards] = useState<number[]>([])
@@ -28,7 +28,7 @@ export default function BadgesDisplay({badge, handleClick}:Props) {
       level: "bronze",
       icon: "🥉",
       category: "account",
-      unlocked: badge,
+o      unlocked: badg,
       reward: {
         type:"Bonus",
         value:"$5000 account bonus",
@@ -168,7 +168,7 @@ export default function BadgesDisplay({badge, handleClick}:Props) {
                                     : "bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
                                 }`}
                                 onClick={() => handleClick}
-                                disabled={badge===false}
+                                disabled={badge.unlocked ===false}
                               >
                                 {claimedRewards.includes(badge.id) ? "Reward Claimed" : "Claim Reward"}
                               </Button>

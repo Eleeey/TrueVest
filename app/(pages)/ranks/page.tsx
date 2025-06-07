@@ -5,7 +5,7 @@ const Badges = async () => {
   const user=await getUserInfo()
   const badge=user?.badge1
   return (
-  <BadgesDisplay badge={badge} handleClick={handleClick} />
+  <BadgesDisplay badg={badge} handleClick={handleClick} />
 );
 };
 
